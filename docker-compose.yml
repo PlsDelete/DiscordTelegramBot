@@ -1,0 +1,13 @@
+﻿services:
+  discord-telegram-bot:
+    image: ${DOCKER_REGISTRY-}discordtelegrambot
+    container_name: discord-telegram-bot
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: discord-telegram-bot/Dockerfile
+    environment:
+      - Discord__Token=${DISCORD_TOKEN}
+      - Telegram__Token=${TELEGRAM_TOKEN}
+      - Telegram__ChatId=${TELEGRAM_CHAT_ID}
+      - Telegram__MessageId=${TELEGRAM_MESSAGE_ID}

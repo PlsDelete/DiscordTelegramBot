@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "discord-telegram-bot": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

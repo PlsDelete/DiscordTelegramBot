@@ -19,6 +19,7 @@ namespace DiscordTelegramBot
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(AppContext.BaseDirectory)
                 .AddJsonFile("appsettings.json", optional: false)
+                .AddEnvironmentVariables()
                 .Build();
 
             var settings = configuration.Get<BotSettings>() 
