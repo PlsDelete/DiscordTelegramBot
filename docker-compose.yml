@@ -5,7 +5,7 @@
     restart: unless-stopped
     build:
       context: .
-      dockerfile: discord-telegram-bot/Dockerfile
+      dockerfile: Dockerfile
     environment:
       - Discord__Token=${DISCORD_TOKEN}
       - Telegram__Token=${TELEGRAM_TOKEN}
